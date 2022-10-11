@@ -8,6 +8,7 @@ import sys
 import os
 import datetime
 import gzip
+import traceback
 
 import subprocess as sp
 
@@ -41,7 +42,7 @@ CONFIG = {
         'google' : 'Google',
         'duckduckgo' : 'DuckDuckGo',
         'ecosia' : 'Ecosia',
-        'brave-search' : 'Brave'
+        'brave' : 'Brave'
     },
     'SEARCH_URL' : {
         'google' : 'https://www.google.com/search?q=',
@@ -132,8 +133,9 @@ def main():
         for r in results:
             print(html.unescape(r))
     elif search_string == '':
-        print('!!-- Type something and search it with %s' % CONFIG['SEARCH_ENGINE_NAME'][SEARCH_ENGINE])
-        print('!!-- Close your search string with "!" to get search suggestions')
+        print('Type something and search it with %s' % CONFIG['SEARCH_ENGINE_NAME'][SEARCH_ENGINE])
+        if CONFIG['SEARCH_ENGINE_NAME'][SEARCH_ENGINE] in ('DuckDuckGo','Google'):
+            print('Close your search string with "!" to get search suggestions')
     else:
         url = CONFIG['SEARCH_URL'][SEARCH_ENGINE] + urllib.parse.quote_plus(search_string)
         sp.Popen(CONFIG['BROWSER_PATH'][BROWSER] + [url], stdout=sp.DEVNULL, stderr=sp.DEVNULL, shell=False)
@@ -184,4 +186,5 @@ if __name__ == "__main__":
             f.close()
         main()
     except:
+        traceback.print_exc()
         sys.exit(1)
