@@ -17,8 +17,8 @@ import html
 ################################################################################
 #####                      C O N F I G U R A T I O N                      ######
 ################################################################################
-SEARCH_ENGINE = 'google'            # or 'duckduckgo'
-BROWSER = 'chrome'                  # or 'firefox', 'chromium', 'brave', 'lynx'
+SEARCH_ENGINE = 'ecosia'            # or 'duckduckgo' or 'ecosia' or 'brave'
+BROWSER = 'firefox'                  # or 'firefox', 'chromium', 'brave', 'lynx'
 TERMINAL = ['gnome-terminal', '--'] # or ['st', '-e'] or something like that
 ################################################################################
 
@@ -39,15 +39,21 @@ CONFIG = {
     },
     'SEARCH_ENGINE_NAME' : {
         'google' : 'Google',
-        'duckduckgo' : 'DuckDuckGo'
+        'duckduckgo' : 'DuckDuckGo',
+        'ecosia' : 'Ecosia',
+        'brave-search' : 'Brave'
     },
     'SEARCH_URL' : {
         'google' : 'https://www.google.com/search?q=',
-        'duckduckgo' : 'https://duckduckgo.com/?q='
+        'duckduckgo' : 'https://duckduckgo.com/?q=',
+        'ecosia' : 'https://www.ecosia.org/search?q=',
+        'brave' : 'https://search.brave.com/search?q='
     },
     'SUGGESTION_URL' : {
         'google' : 'https://www.google.com/complete/search?',
-        'duckduckgo' : 'https://duckduckgo.com/ac/?'
+        'duckduckgo' : 'https://duckduckgo.com/ac/?',
+        'ecosia' : 'https://ac.ecosia.org/autocomplete?q=',
+        'brave' : 'https://search.brave.com/ac/?'
     }
 }
 
