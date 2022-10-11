@@ -19,7 +19,7 @@ import html
 ################################################################################
 SEARCH_ENGINE = 'ecosia'            # or 'duckduckgo' or 'ecosia' or 'brave'
 BROWSER = 'firefox'                  # or 'firefox', 'chromium', 'brave', 'lynx'
-TERMINAL = ['gnome-terminal', '--'] # or ['st', '-e'] or something like that
+TERMINAL = ['qterminal', '--'] # or ['st', '-e'] or something like that
 ################################################################################
 
 CONFIG = {
