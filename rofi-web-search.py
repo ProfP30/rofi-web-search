@@ -42,13 +42,23 @@ CONFIG = {
         'google' : 'Google',
         'duckduckgo' : 'DuckDuckGo',
         'ecosia' : 'Ecosia',
-        'brave' : 'Brave'
+        'brave' : 'Brave',
+        'swisscows' : 'Swisscows',
+        'quantlite' : 'QuantLite',
+        'startpage' : 'Startpage',
+        'metager' : 'Metager',
+        'neeva' : 'Neeva'
     },
     'SEARCH_URL' : {
         'google' : 'https://www.google.com/search?q=',
         'duckduckgo' : 'https://duckduckgo.com/?q=',
         'ecosia' : 'https://www.ecosia.org/search?q=',
-        'brave' : 'https://search.brave.com/search?q='
+        'brave' : 'https://search.brave.com/search?q=',
+        'swisscows' : 'https://swisscows.com/de/web?query=',
+        'qwantlite' : 'https://lite.qwant.com/?q=',
+        'startpage' : 'https://www.startpage.com/sp/search?q=',
+        'metager' : 'https://metager.org/meta/meta.ger3?eingabe=',
+        'neeva' : 'https://neeva.com/search?q='
     },
     'SUGGESTION_URL' : {
         'google' : 'https://www.google.com/complete/search?',
